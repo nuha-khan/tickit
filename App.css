@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+body {
+  background-color: #f8f4e3;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 23px,
+    #e0d4c3 24px
+  );
+  background-size: 100% 25px;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Architects Daughter", cursive;
+  color: #4b3f2f;
+}
+
+/* Container (like notebook paper) */
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fcfaf2;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px dashed #d2c9b6;
+  position: relative;
+}
+
+/* Heading area */
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.heading h1 {
+  color: #f2a29f;
+  font-size: 2rem;
+  transform: rotate(-2deg);
+  background-color: #ffe3dc;
+  padding: 0.4rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px #f2a29f;
+}
+
+.paperclip {
+  font-size: 1.3rem;
+  transform: rotate(20deg);
+}
+
+.doodle {
+  font-size: 1.3rem;
+  color: #f2a29f;
+}
+
+/* Input form */
+.form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #d2c9b6;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 70%;
+  color: #4b3f2f;
+  outline: none;
+}
+
+/* Button style */
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button span {
+  background-color: #e8d8c3;
+  border: 2px solid #a5937d;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+button span:hover {
+  background-color: #d2c9b6;
+}
+
+/* Task list */
+ul {
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #fffdf8;
+  border-left: 4px solid #a3b18a;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #4b3f2f;
+  list-style-type: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+li input[type="checkbox"] {
+  accent-color: #a3b18a;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+li span {
+  transition: all 0.3s ease;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Delete button */
+.delete-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #a5937d;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: #f2a29f;
+}
+
+/* Empty message */
+.empty-msg {
+  font-size: 1rem;
+  color: #8b7765;
+  text-align: center;
+  margin-top: 1rem;
+  background-color: #fefaf4;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px dashed #dbcbb3;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 115%;
+     padding: 0.5rem 1rem; /* Top-bottom: 0.5rem, Left-right: 1rem */
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .heading h1 {
+    font-size: 1.3rem;
+    padding: 0.4rem 1.2rem;
+  }
+
+  .form input {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  button span {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  li {
+    font-size: 0.95rem;
+    padding: 0.4rem;
+  }
+
+  li input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+}
